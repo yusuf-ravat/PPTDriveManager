@@ -16,7 +16,7 @@ A simple web application to upload PPT files to Google Drive and MS SQL database
 - .NET Core SDK (for backend)
 - Google Drive API credentials
 
-#Project Structure
+## Project Structure
    1. DotNetCoreWebApi
       - Only PPTApi Folder
    2. React Frontend Part
