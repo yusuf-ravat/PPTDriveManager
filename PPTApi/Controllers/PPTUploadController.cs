@@ -67,23 +67,23 @@ namespace PPTApi.Controllers
 
 
 
-        [HttpGet("getpptfile/{filename}")]
-        public async Task<IActionResult> GetPptFile(string filename)
-        {
-            var filePath = Path.Combine("path/to/your/files", filename);
-            if (!System.IO.File.Exists(filePath))
-            {
-                return NotFound();
-            }
+        //[HttpGet("getpptfile/{filename}")]
+        //public async Task<IActionResult> GetPptFile(string filename)
+        //{
+        //    var filePath = Path.Combine("path/to/your/files", filename);
+        //    if (!System.IO.File.Exists(filePath))
+        //    {
+        //        return NotFound();
+        //    }
 
-            var memory = new MemoryStream();
-            using (var stream = new FileStream(filePath, FileMode.Open))
-            {
-                await stream.CopyToAsync(memory);
-            }
-            memory.Position = 0;
-            return File(memory, "application/vnd.openxmlformats-officedocument.presentationml.presentation", filename);
-        }
+        //    var memory = new MemoryStream();
+        //    using (var stream = new FileStream(filePath, FileMode.Open))
+        //    {
+        //        await stream.CopyToAsync(memory);
+        //    }
+        //    memory.Position = 0;
+        //    return File(memory, "application/vnd.openxmlformats-officedocument.presentationml.presentation", filename);
+        //}
 
         [HttpPost("upload")]
 public async Task<IActionResult> UploadPPT(List<IFormFile> pptFiles)
