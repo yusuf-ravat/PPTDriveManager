@@ -1,3 +1,4 @@
+
 # PPTDriveManager
 ## Overview
 A simple web application to upload PPT files to Google Drive and MS SQL database, managed through a .NET Core backend and React frontend. Features include multi-file upload, viewing, and deleting presentations, with integrated Google Drive API support for file handling.
@@ -15,6 +16,13 @@ A simple web application to upload PPT files to Google Drive and MS SQL database
 - .NET Core SDK (for backend)
 - Google Drive API credentials
 
+## Project Structure
+   1. DotNetCoreWebApi
+      - Only PPTApi Folder
+   2. React Frontend Part
+      - public, src Folder and other files
+
+
 # Setting Up OAuth Credentials
 
 To create your Client ID, Client Secret ID, and Refresh Token, follow these steps:
@@ -30,6 +38,6 @@ To create your Client ID, Client Secret ID, and Refresh Token, follow these step
    - **Generate Refresh Token:** Use the OAuth 2.0 Playground to generate a refresh token using your Client ID and Client Secret ID.
 
 3. **Important Notes:**
-   - Keep your Client ID, Client Secret ID, and Refresh Token secure and do not share them publicly.
+   - Keep your Client ID, Client Secret ID, and Refresh Token secure and not publicly share them.
    - Make sure to follow best practices for storing and using these credentials in your application.
 
